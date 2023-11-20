@@ -18,12 +18,10 @@ javascript: (() => {
   }
 
   function getUniqueSpeciesList(observations) {
-    let uniqueSpecies = [];
+    let uniqueSpecies = new Set();
     for (const observation of observations) {
       const commonName = getSpeciesName(observation);
-      if (!uniqueSpecies.includes(commonName)) {
-        uniqueSpecies.push(commonName);
-      }
+      uniqueSpecies.add(commonName);
     }
     return uniqueSpecies;
   }
