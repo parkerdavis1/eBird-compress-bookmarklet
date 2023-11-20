@@ -1,0 +1,16 @@
+{
+  "name": "ebird-compress",
+  "version": "0.0.1",
+  "description": "Bookmarklet to arrange eBird alerts into expandable species groups",
+  "main": "script.js",
+  "scripts": {
+    "minify": "esbuild script.js --minify --outfile=mini.js",
+    "build": "npm run minify && npx @11ty/eleventy",
+    "dev": "npm run minify && npx @11ty/eleventy --serve"
+  },
+  "author": "Parker Davis",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "0.19.5"
+  }
+}
